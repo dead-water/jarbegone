@@ -26,10 +26,10 @@ if __name__ == "__main__":
         "threshold",
         type=float,
         default=10.0,
-        help="Upper threshold to highlight infrequent words (percentage)), default=10",
+        help="Upper threshold to highlight infrequent words (percentage))",
     )
     args = parser.parse_args()
-    thres = args.threshold
+    threshold = args.threshold / 100
     raw = args.file.readlines()
 
     # check correct module installation
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
     # preprocessing
     THRESHOLD = (
-        0.1 * corpus_total
+        threshold * corpus_total
     )  # words seen <20% in the corpus [warning corpus is still dirty]
     r = re.compile("(?<!\S)[A-Za-z]+(?!\S)|(?<!\S)[A-Za-z]+(?=:(?!\S))")
     annoying_chars = {ord(x): "" for x in ["\n", ":", "'"]}
