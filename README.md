@@ -20,7 +20,7 @@ Requires modules: `texsoup` & `nltk`
 ```bash
 python jarbegone0.1.py test.tex 10
 ```
-a
+
 ```
 Building frequency distribution
 Extracting words from TeX document
