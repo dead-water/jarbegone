@@ -1,7 +1,7 @@
 # JarBeGone
 "Jar(gon)-be-gone"
 
-Shows word frequencies of text extracted from a TeX file against an nltk word corpus... or more simply, procratination of actual work.
+Shows word frequencies of text extracted from a TeX file against an nltk word corpus... or more simply, procratination from actual work.
 
 ## Requirements
 Requires modules: `texsoup` & `nltk`
